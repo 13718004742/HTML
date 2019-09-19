@@ -1,0 +1,210 @@
+/* 清除默认的外边距 */
+body{
+    margin: 0px 0px;
+}
+
+/* 清除浮动 */
+.clearfix::after{
+    /* 设置为块盒 */
+    display: block;
+    /* 内容空 保证看不出来有内容*/
+    content: "";
+    /* 清除浮动 */
+    clear: both;
+}
+
+/* 主要部分 */
+.main .subnav{
+    background: #47464a;
+    height: 60px;
+    width: 100%;
+    min-width: 1200px;
+    line-height: 60px;
+}
+.main .subnav .navbar{
+    height: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.main .subnav .navbar a:hover{
+    color: #fff;
+}
+.main .subnav .navbar li{
+    display: inline-block;
+    /* 去掉样式 */
+    list-style: none;
+    /* 外边距 */
+    margin: 0 30px;
+}
+.main .subnav .navbar li a{
+    /* 文字大小 */
+    font-size: 16px;
+    /* 文字颜色 */
+    color: #999;
+    /* 去掉下划线 */
+    text-decoration: none;
+}
+.main .subnav .navbar li a.active{
+    /* 文字颜色 */
+    color: #ef4238;
+}
+
+/* 电影区域 */
+.main .container{
+    /* 固定宽度 */
+    width: 1120px;
+    /* 动态高度 */
+    margin: 0 auto;
+    /* 顶部内边距 */
+    padding-top: 40px;
+
+    height: 1000px;
+}
+/* 引导部分 */
+.main .container .movie-channel{
+    /* 边框 */
+    border: 1px solid #e5e5e5;
+}
+.main .container .movie-channel .tag-lines{
+    /* 内边距 */
+    padding: 0 20px;
+    /* 没有样式 */
+    list-style: none;
+}
+.container .movie-channel .tag-line .tag-title{
+    font-size: 14px;
+    color: #999;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 5px;
+    /* 左浮动 */
+    float: left;
+}
+.container .movie-channel .tag-lines ul{
+    padding-left: 40px;
+    list-style: none;
+}
+/* lines */
+.tag-lines{
+    margin: 0;
+}
+/* 三个类型 */
+.tag-lines .tag-line{
+    /* 外边框 */
+    border-bottom: 1px dotted #e5e5e5;
+    /* 内边距 */
+    padding: 10px 0px;
+}
+/* 全部等文字 */
+.tag-lines ul li{
+    /* 行块盒 */
+    display: inline-block;
+    padding: 4px 0px;
+}
+.tag-line ul li a{
+    text-decoration: none;
+    margin: 0 10px;
+    color: #333;
+    font-size: 14px;
+}
+/* 选中的文字 */
+.tag-lines ul li.select{
+    border-radius: 15px; 
+    background: #f34d41;
+}
+.tag-lines ul li a.select{
+    color: #fff;
+}
+
+/* 电影排序方式 */
+.main .container .movie-sort{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 30px;
+}
+.main .container .movie-sort ul{
+    list-style: none;
+    margin: 0;
+    height: 50px;
+    padding-left: 0px;
+    text-align: left;
+}
+.main .container .movie-sort ul li{
+    float: left;
+    padding-right: 50px;
+}
+.main .container .movie-sort ul li a{
+    text-decoration: none;
+    color: #333;
+}
+.main .container .movie-sort ul li a.select{
+    color: #ef4238;
+}
+
+/* 电影区域 */
+.main .container .movie .movie-item{
+    float: left;
+    width: 160px;
+    margin-right: 32px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* 只设置这些元素的第几个子元素 : 6的倍数*/
+.main .container .movie .movie-item:nth-child(6n){
+    margin-right: 0;
+}
+/* 设置图片的宽高 */
+.main .container .movie .movie-item .image{
+    width: 160px;
+    height: 220px;
+}
+/* 设置文字 */
+.main .container .movie .movie-item .name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+.main .container .movie .movie-item .name a{
+    text-decoration: none;
+    color: #333;
+}
+/* 设置评分 */
+.main .container .movie .movie-item .score{
+    text-align: center;
+    color: #ffb400;
+    height: 25px;
+    line-height: 25px;
+    /* 斜体 */
+    font-style: italic;
+}
+/* 选中这个元素的第一个字母 */
+.main .container .movie .movie-item .score .front{
+    font-size: 22px;
+}
+.main .container .movie .movie-item .score .back{
+    font-size: 18px;
+}
+
+/* 页码 */
+.main .container .page{
+    width: 100%;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+}
+.main .container .page a{
+    text-decoration: none;
+    border: 1px solid #d8d8d8;
+    padding: 0 10px;
+    color: #333;
+}
+.main .container .page a.select{
+    color: #fff;
+    background: red;
+}
+
